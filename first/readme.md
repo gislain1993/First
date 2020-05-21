@@ -12,7 +12,7 @@ Greek letter `'μ'` is pronounced `'my'` as in `micro` or `'mee'` according to [
 * **A** PI
 * **M** arkup
 
-It is mostly about the creation of *static* and *serverless* websites and you might want to [read more](https://jamstack.org/) about that modern way to build lightweight web pages [here](https://jamstack.wtf/).
+It is  mostly about the creation of *static* and *serverless* websites and you might want to [read more](https://jamstack.org/) about that modern way to build lightweight web pages [here](https://jamstack.wtf/).
 
 * ## what can I do with ... myjam ?
 
