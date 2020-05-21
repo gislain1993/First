@@ -1,7 +1,94 @@
 {
-  "name": "first",
-  "description": "My first web page using microjam",
-  "version": "0.1.0",
-  "author": "it's me",
-  "microjam": {}
+	"name": "microjam",
+	"description": "Most minimalistic JAMStack environment",
+	"author": "Stefan Goessner <fang03@web.de>",
+	"publisher": "goessner",
+	"version": "0.2.4",
+	"keywords": [
+		"JAMStack",
+		"deploy",
+		"github-pages",
+		"markdown",
+		"microjam"
+	],
+	"microjam": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/goessner/microjam.git"
+	},
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.saveAsHtml",
+				"title": "Save as HTML",
+				"category": "Markdown"
+			}
+		],
+		"menus": {
+			"editor/title": []
+		},
+		"keybindings": [
+			{
+				"key": "ctrl+k -",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"snippet": "---\n\"layout\": \"$1\",\n\"title\": \"$2\",\n\"date\": \"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE\"\n---\n$0"
+				}
+			},
+			{
+				"command": "extension.saveAsHtml",
+				"key": "ctrl+K ,",
+				"when": "editorTextFocus"
+			}
+		],
+		"markdown.previewStyles": [
+			"./node_modules/katex/dist/katex.min.css",
+			"./node_modules/markdown-it-texmath/css/texmath.css",
+			"./css/previewstyle.css"
+		],
+		"markdown.markdownItPlugins": true,
+		"markdown.previewScripts": [
+			"./dist/g2.html.js"
+		],
+		"configuration": {
+			"title": "microjam",
+			"properties": {
+				"microjam.showSaveMessage": {
+					"type": "boolean",
+					"default": true,
+					"description": "Visibility of 'showInformationMessage' for display successful storage of 'html' file."
+				},
+				"microjam.markdownItPlugins": {
+					"type": "array",
+					"default": [],
+					"description": "markdown-it-plugins to install at initialization time."
+				}
+			}
+		}
+	},
+	"main": "./extension",
+	"dependencies": {
+		"argparse": "^1.0.9",
+		"commander": "^2.19.0",
+		"entities": "~2.0.0",
+		"katex": "0.11.1",
+		"linkify-it": "^2.2.0",
+		"markdown-it": "^10.0.0",
+		"markdown-it-footnote": "^3.0.2",
+		"markdown-it-task-lists": "^2.1.1",
+		"markdown-it-texmath": "^0.6.0",
+		"mdurl": "^1.0.1",
+		"uc.micro": "^1.0.6"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.34.0"
+	}
 }

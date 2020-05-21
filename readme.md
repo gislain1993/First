@@ -1,9 +1,8 @@
-# ![&mu;Jam &ndash; simple](./docs/img/icon64.png " A &mu;Jam template") A documentation theme for &mu;jam with sidebar
-
+# A minimal sample and template repository for *&mu;jam*
 
 * ## &mu; ... what ?
 
-Greek letter `'μ'` is pronounced `'my'` as in `micro` or `'mee'` according to [modern Greek](https://www.thoughtco.com/the-greek-alphabet-1705558) . So simply call it *'microjam'* or *'myjam'*.
+Greek letter `'μ'` is pronounced `'my'` as in `micro` or `'mee'` according to [modern Greek](https://www.thoughtco.com/the-greek-alphabet-1705558) .
 
 * ## ok ... myjam ?
 
@@ -12,21 +11,23 @@ Greek letter `'μ'` is pronounced `'my'` as in `micro` or `'mee'` according to [
 * **A** PI
 * **M** arkup
 
-It is  mostly about the creation of *static* and *serverless* websites and you might want to [read more](https://jamstack.org/) about that modern way to build lightweight web pages [here](https://jamstack.wtf/).
+It is mostly about the creation of *serverless* websites and you might want to [read more](https://jamstack.org/) about that modern way to build lightweight web pages [here](https://jamstack.wtf/).
 
 * ## what can I do with ... myjam ?
 
 If you want to 
 * create a small to medium web site
-* write down the contents of your web pages in that easy to learn and use Markdown language
+* write down the contents of your web pages in the easy to learn and use Markdown language
 * publish your web-pages to your GitHub repository and GitHub pages
 * do that all from inside free [*Visual Studio Code*](https://code.visualstudio.com/) (`vscode`) editor
 
-then the minimalistic and powerful approach of **&mu;jam** might convice you.
+then the minimalistic and powerful approach of *&mu;jam* might convice you.
 
+* ## ok, how can I try out your ... &mu;jam approach ?
 
-A [&mu;Jam](https://goessner.github.io/microjam/) template for web based project or product documentation. Different markdown documentation files are accessible via a common sidebar.
+Chances are that you already [installed](https://code.visualstudio.com/Download) the `vscode` editor. You can also do that later and first read about creating the webpages of this repository step-by-step by yourself manually in three simple steps:
 
-![&mu;Jam template for documentation](./docs/img/shot-01.png)
+1. [A new Project]()
+2. [Generating Content]()
+3. [Publish to the World]()
 
-You can see it live and read more [here](https://goessner.github.io/microjam-docs/introduction.html) .
