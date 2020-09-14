@@ -9,57 +9,57 @@
 
 #  Introduction
 
-## What is it ?
+## Qu'est-ce-que c'est ?
 
-Greek letter `'μ'` is pronounced `'my'` as in `micro`, `'mu'` as in `'music'` or `'mee'` according to [modern Greek](https://www.thoughtco.com/the-greek-alphabet-1705558). In that context here it simply means *tiny* or  *minimalistic*.
+La lettre grèque `'μ'` es prononcé `'my'` comme `micro`, `'mu'` comme en musique `'music'` ou `'mee'` en accord au [Grecque moderne](https://www.thoughtco.com/the-greek-alphabet-1705558). Dans ce contexte, cela signifie simplement *minuscule* ou *minimaliste*.
 
-That `'Jam'` in &mu;Jam comes from `Jamstack` and means the collection of the three attributes
+Ce `'Jam'` dans &mu;Jam vient de `Jamstack` et signifie une collection de trois attributs:
 * **J** avaScript
 * **A** PI
 * **M** arkup
 
-It is mostly about the creation of static web pages or *serverless* websites and you might want to [read more](https://jamstack.org/) about that modern way to build lightweight web pages [here](https://jamstack.wtf/) and [there](https://jamstack.email/).
+Il s'agit principalement de la création de pages Web statiques ou de sites Web *sans serveur* et vous voudrez peut-être [lire plus](https://jamstack.org/) à propos de cette façon moderne de créer des pages Web légères [ici](https://jamstack.wtf/) et [ici](https://jamstack.email/).
 
-## What can I do with it ?
+## Que puis-je faire avec cela ?
 
-If you want to 
-* create a small to medium website
-* write down the contents of your web pages in that easy to learn and use [Markdown language](https://commonmark.org/help/)
-* publish your web-pages to your GitHub repository and [GitHub pages](https://pages.github.com/)
-* do that all from inside free [*Visual Studio Code*](https://code.visualstudio.com/) (`vscode`) editor
+Si tu veux créer:
+* créer un site Web petit à moyen
+* écrivez le contenu de vos pages Web de manière simple à apprendre et à utiliser [langage Markdown ](https://commonmark.org/help/)
+* publier vos pages Web dans votre référentiel GitHub et vos [pages GitHub](https://pages.github.com/)
+* fais tout ça de l'intérieur gratuitement [*Visual Studio Code*](https://code.visualstudio.com/) éditeur (`vscode`).
 
-then the minimalistic and powerful approach of &mu;Jam might convice you.
+alors l'approche minimaliste et puissante de &mu;Jam pourrait vous convaincre.
 
-## I am not a programmer !
+## Je ne suis pas un programmeur !
 
-You don't need to be one ... promised.
+Vous n'avez pas besoin d'en être un ... promis.
 
-At first you need to install the free and open source [Visual Studio Code](https://code.visualstudio.com/Download) editor. Chances are you already have it. But you can also do that later.
+Au début, vous devez installer le logiciel gratuit et ouvrir la source [Visual Studio Code](https://code.visualstudio.com/Download) editor. Il y a de fortes chances que vous l'ayez déjà. Mais vous pouvez également le faire plus tard.
 
-## Yet another Jamstack Approach ?
+## Maintenant une autre approche Jamstack ?
 
-Hmm ... there are in fact a [lot static site generators](https://www.staticgen.com/) available and here are [some ways](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/) to find your [best Jamstack approach](https://www.stackbit.com/blog/choosing-your-ssg/).
+Hmm ... il y a en fait un [lot statique de sites generateurrs](https://www.staticgen.com/) disponible et voici [quelques chemins](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/) pour trouver votre [meilleure approche Jamstack](https://www.stackbit.com/blog/choosing-your-ssg/).
 
-Many of them
+Beaucoup d'entre eux
 
-* are highly configurable.
-* depend on a certain programming language.
-* have fine grained control via command line usage.
+* sont hautement configurables.
+* dépend d'un certain langage de programmation.
+* avoir un contrôle précis via l'utilisation de la ligne de commande.
 
-So if this is exactly what you want, go on ... I recommend to have a closer look at [Eleventy](https://www.11ty.dev).
+Donc, si c'est exactement ce que vous voulez, continuez ... Je recommande de regarder de plus près [Eleventy](https://www.11ty.dev).
 
-In contrast, **&mu;Jam** is meant to be a minimalistic, [low code publishing](https://en.wikipedia.org/wiki/Low-code_development_platform) tool, which ...
+En revanche, **&mu;Jam** se veut minimaliste, [faible code de publication](https://en.wikipedia.org/wiki/Low-code_development_platform) tool, which ...
 
-> *  is easy to learn and use.
-> *  does not require web programming skills.
-> *  can handle LaTeX math expressions natively.
-> *  integrates static or dynamic vector graphics.
-> *  integrates scripting capabilities.
-> *  offers comfortable Html previewing.
-> *  supports different templates and styles.
-> *  enables high quality research paper `pdf`-format output.
-> *  doing that all inside of a professional markdown authoring application.
+> * est facile à apprendre et à utiliser.
+> * ne nécessite pas de compétences en programmation Web.
+> * peut gérer les expressions mathématiques LaTeX de manière native.
+> * intègre des graphiques vectoriels statiques ou dynamiques.
+> * intègre des capacités de script.
+> * offre une prévisualisation Html confortable.
+> * prend en charge différents modèles et styles.
+> * permet une sortie au format pdf de papier de recherche de haute qualité.
+> * faire tout cela dans une application de création de démarque professionnelle.
 
-**&mu;Jam** is used by scientists, engineers and students for creating online educational or [research](https://www.researchgate.net/profile/Stefan_Goessner) content.
+**&mu;Jam** est utilisé par les scientifiques, les ingénieurs et les étudiants pour créer des programmes éducatifs ou [rechercher](https://www.researchgate.net/profile/Stefan_Goessner) le contenu.
 
-But as you can easily leave that *math*, *vector graphics* and *research paper* stuff out, it may serve your non-academic publishing wishes also well. In this possible case you are invited to read on.
+Mais comme vous pouvez facilement laisser ces éléments *mathématiques*, *graphiques vectoriels* et *document de recherche* de côté, cela peut également bien servir vos souhaits d'édition non académique. Dans ce cas possible, vous êtes invité à poursuivre votre lecture.

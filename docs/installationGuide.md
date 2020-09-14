@@ -7,67 +7,68 @@
   "category": ["math"]
 ---
 
-# Creating Serverless Web Pages
+# Création de pages web sans serveur
 
-This is an installation guide for **&mu;jam**, an extension to [*Visual Studio Code*](https://code.visualstudio.com/). VS Code is a powerful and heavily used open source editor from Microsoft available on Linux, Mac and Windows platforms. The most important feature in this context of website creation and authoring is *VS Code being a highly sophisticated Markdown Editor*.
+Ceci est un guide d'installation pour **&mu;jam**, une extension à [*Visual Studio Code*](https://code.visualstudio.com/). VS Code est un éditeur open source puissant et très utilisé de Microsoft disponible sur les plates-formes Linux, Mac et Windows. La caractéristique la plus importante dans ce contexte de création et de création de sites Web est *VS Code étant un éditeur de Markdown très sophistiqué*.
 
-So in using this installation guide we need only few prerequisites.
+Donc, en utilisant ce guide d'installation, nous n'avons besoin que de quelques prérequis.
 
-* VS Code installed. You can download it from [here](https://code.visualstudio.com/download).
-* Install **&mu;jam** ... (todo)
-* Minimal knowledge of markdown. Here is an overview of its [basic syntax](https://www.markdownguide.org/basic-syntax/).
+* VS Code installé. Vous pouvez le télécharger [ici](https://code.visualstudio.com/download).
+* Installe **&mu;jam** [ici](https://marketplace.visualstudio.com/items?itemName=goessner.microjam)
+* les connaissances minimales de markdown. Ici un aperçu de la [syntax de base](https://www.markdownguide.org/basic-syntax/).
 
-You may like to hear that ...
+Vous aimerez peut-être entendre ça ...
 
-* no programming skills are required.
-* initializing and creating websites can be done completely inside of VS Code.
-* interested but impatient persons can skip all *Information* and *Explanation* labeled sections below.
+* aucune compétence en programmation n'est requise.
+* l'initialisation et la création de sites Web peuvent être effectuées complètement à l'intérieur de VS Code.
+* les personnes intéressées mais impatientes peuvent ignorer toutes les sections *Informations* et *Explication* ci-dessous.
 
-We will do that in three simple steps:
+Nous le ferons en trois étapes simples:
 
-1. [A New Project](#1-a-new-project-1)
-2. [Generating Content](#2-generating-content-1)
-3. [Publish to the World](#3-publish-to-the-world-1)
+1. [Un nouveau Projet](#1-a-new-project-1)
+2. [Generation du Contenu](#2-generating-content-1)
+3. [Publier dans le monde](#3-publish-to-the-world-1)
 
-## 1. A New Project
+## 1. Un Nouveau Projet
 
-For a new project we need a project folder, where everything necessary can reside in. For creating that new folder
 
-1. Open a new terminal session right in `vscode` editor.
+Pour un nouveau projet, nous avons besoin d'un dossier de projet dans lequel tout ce qui est nécessaire peut résider. Pour créer ce nouveau dossier
+
+1. Ouvrez une nouvelle session de terminal directement dans l'éditeur `vscode`.
 
 <figure>
   <img src="img/mu-jam.01.png">
-  <figcaption>Fig. 1: Start with a blank editor and open a new terminal session.</figcaption>
+  <figcaption>Fig. 1: Commencez avec un éditeur vide et ouvrez une nouvelle session de terminal.</figcaption>
 </figure>
 
-2. Type in the terminal window the command `mkdir` (`make directory`) and ...   
+2. Tapez dans la fenêtre du terminal la commande `mkdir` (`make directory`) and ...   
     specify with it the path to our new project folder `first`.
 
 ```
 > mkdir <new folder path>
 ```
 
-> ### **Important** !
-> For simplicity reasons the root directory `'/'` is taken here as the location of the project folder. This should be avoided in general and is even restricted under Unix / OSX. Take your `/home` directory instead (`> cd ~`). 
+> ### **Important**!
+> Pour des raisons de simplicité, le répertoire racine ``/`` est pris ici comme emplacement du dossier du projet. Ceci doit être évité en général et est même limité sous Unix / OSX. Prenez votre répertoire `/ home` à la place (`> cd ~ `). 
 
 <figure>
   <img src="./img/mu-jam.02.png" alt="md = make directory">
-  <figcaption>Fig. 2: Create a project folder.</figcaption>
+  <figcaption>Fig. 2: Créer un dossier de projet.</figcaption>
 </figure>
 
-3. We navigate to our newly created folder via `cd` (`change directory`). 
+3. Nous navigons vers notre dossier nouvellement crée via `cd` (`change directory`). 
 ```
 > cd <new folder path>
 ```
 <figure>
   <img src="./img/mu-jam.03.png">
-  <figcaption>Fig. 3: Navigate to project folder.</figcaption>
+  <figcaption>Fig. 3: Accédez au dossier du projet.</figcaption>
 </figure>
 
-We want to create the first file in our nearly empty directory `first`.
+Nous voulons créer le premier fichier dans notre répertoire presque vide `first`.
 
-4. Select in the menu `File > New File` (<kbd>Ctrl</kbd> + <kbd>N</kbd>).
-5. Copy and paste the following text into its window (<kbd>Ctrl</kbd> + <kbd>C</kbd>, <kbd>Ctrl</kbd> + <kbd>V</kbd>). 
+4. Sélectionnez dans le menu `Fichier > Nouveau fichier` (<kbd> Ctrl </kbd> + <kbd> N </kbd>).
+5. Copiez et collez le texte suivant dans sa fenêtre (<kbd> Ctrl </kbd> + <kbd> C </kbd>, <kbd> Ctrl </kbd> + <kbd> V </kbd>).
 
 ```json
 {
@@ -79,30 +80,31 @@ We want to create the first file in our nearly empty directory `first`.
 }
 ```
 
-6. Save the file via `File > Save As...` (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>) giving it the name `package.json`. Save it into the new project directory `first`.
+6. Enregistrez le fichier via `File > Save As ...` (<kbd> Ctrl </kbd> + <kbd> Shift </kbd> + <kbd> S </kbd>) en lui donnant le nom de package. json`. Enregistrez-le dans le nouveau répertoire du projet `first`.
 
 <figure>
   <img src="./img/mu-jam.04.png">
-  <figcaption>Fig. 4: Create the 'package.json' file.</figcaption>
+  <figcaption>Fig. 4: Créez le fichier 'package.json'.</figcaption>
 </figure>
 
-With that we finished our first step in creating a new project and will proceed in generating some content.
+
+Avec cela, nous avons terminé notre première étape de création d'un nouveau projet et continuerons à générer du contenu.
 
 
-## 2. Generating Content
+## 2. Génération de contenu
 
-We now start to write some Markdown documents using `vscode` as markdown editor. 
+Nous commençons maintenant à écrire des documents Markdown en utilisant `vscode` comme éditeur de markdown.
 
-> ### Information
-> **μjam** basically differentiates between three different types of documents:
+> ### Informations
+> **μjam** différencie essentiellement trois types de documents:
 >
-> * `page` represents a stand-alone web page like an `about` page.
-> * `article`s are web pages building a consecutive list of entries like *blog posts*.
-> * `index` represents the main page, potentially holding a table of contents of all `article` pages.
+> * `page` représente une page Web autonome comme une page` about`.
+> * Les `article`s sont des pages Web construisant une liste consécutive d'entrées comme * les articles de blog *.
+> * `index` représente la page principale, contenant potentiellement une table des matières de toutes les pages` article`.
 >
-> A certain layout is assigned to each of these three types.
+> Une certaine disposition est attribuée à chacun de ces trois types.
 
-At this moment we have a tiny directory structure:
+En ce moment, nous avons une petite structure de répertoires:
 
 ```
 /first
@@ -112,9 +114,9 @@ At this moment we have a tiny directory structure:
 
 ### 2.1 `page` Documents
 
-Let's create an `about` page for our first web site. 
+Créons une page à propos de notre premier site Web.
 
-1. Copy and paste the following text into a new markdown window (<kbd>Ctrl</kbd> + <kbd>C</kbd>, <kbd>Ctrl</kbd> + <kbd>V</kbd>)
+1. Copiez et collez le texte suivant dans une nouvelle fenêtre de démarque (<kbd>Ctrl</kbd> + <kbd>C</kbd>, <kbd>Ctrl</kbd> + <kbd>V</kbd>)
 
 ```
 ---
@@ -122,68 +124,70 @@ Let's create an `about` page for our first web site.
 "title": "About"
 ---
 
-# About this Site 
+
+# À propos de ce site
   
-This site was created as a simple collection of markdown files using minimalistic *Static Site Generator* **&mu;jam**.
+Ce site a été créé comme une simple collection de fichiers de démarques utilisant un *Static Site Generator* **&mu;jam** minimaliste.
 ```
-2. Save it to file `about.md` in the new `docs` directory (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>).
-3. Show preview window by pressing the *red-circled* preview-button (<kbd>Ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd>). 
+2. Enregistrez-le dans le fichier `about.md` dans le nouveau répertoire` docs` (<kbd> Ctrl </kbd> + <kbd> Maj </kbd> + <kbd> S </kbd>).
+3. Affichez la fenêtre d'aperçu en appuyant sur le bouton d'aperçu * entouré de rouge * (<kbd> Ctrl </kbd> + <kbd> K </kbd> <kbd> V </kbd>).
 
 <figure>
   <img src="./img/mu-jam.05.png">
-  <figcaption>Fig. 5: Writing the 'about' page document.</figcaption>
+  <figcaption>Fig. 5: Rédaction du document de la page «à propos».</figcaption>
 </figure>
 
-> ### Explanation
-> While working on a markdown file you can always examine the html-result visually side-by-side in a preview window (Fig. 5). Please note some *front matter metadata* at the top of our `about.md` file. These metadata are enclosed between two lines of three dashes `---` and so separated from the following markdown text. That separator style is taken from `yaml`, but the metadata itself has to follow `json`-syntax strictly.
+> ### Explication
+> Lorsque vous travaillez sur un fichier markdown, vous pouvez toujours examiner le résultat html côte à côte dans une fenêtre d'aperçu (Fig. 5). Veuillez noter quelques * métadonnées préliminaires * en haut de notre fichier `about.md`. Ces métadonnées sont placées entre deux lignes de trois tirets «---» et ainsi séparées du texte de démarque suivant. Ce style de séparation est tiré de `yaml`, mais les métadonnées elles-mêmes doivent suivre strictement la syntaxe` json`.
 
-We now want to open our complete project folder in `vscode`.
+Nous voulons maintenant ouvrir notre dossier de projet complet dans `vscode`.
 
-> ### Explanation
-> After having successfully saved `about.md` into the `docs` folder &ndash; which is our *first* content file in this project &ndash; we might have realized, that the project directory structure has changed significantly &ndash; magically. We want to proof that by `vscode`'s  comfortable Explorer View.
+> ### Explication
+> Après avoir enregistré avec succès `about.md` dans le dossier` docs` & ndash; qui est notre * premier * fichier de contenu dans ce projet & ndash; nous aurions peut-être réalisé que la structure des répertoires du projet a considérablement changé & ndash; magiquement. Nous voulons le prouver par la confortable vue Explorer de `vscode`.
 
-4. Switch on the Explorer View by pressing the uppermost symbol of the [*Activity Bar*](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout), located on the far left-hand side of the editor. 
-5. The Explorer View opens and asks us to `'Open Folder'`. Pressing this button and selecting our directory `/first`, we get a nice view of our folder structure (Fig. 6). At the same time the Status Bar color has turned from *purple* to *blue*.
+4. Activez la vue Explorateur en appuyant sur le symbole le plus haut de la [*Barre d'activité*](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout), situé à l'extrême gauche de l'éditeur.
+5. La vue de l'explorateur s'ouvre et nous demande `'Ouvrir le dossier '`. En appuyant sur ce bouton et en sélectionnant notre répertoire `/ first`, nous obtenons une belle vue de notre structure de dossiers (Fig. 6). En même temps, la couleur de la barre d'état est passée de * violet * à * bleu *.
 
 <figure>
   <div><img src="./img/mu-jam.06-1.png">&nbsp;&nbsp;<img src="./img/mu-jam.06-2.png"></div>
-  <figcaption>Fig. 6: Extended project folder structure after saving the first markdown file.</figcaption>
+  <figcaption>Fig. 6: Structure de dossier de projet étendue après l'enregistrement du premier fichier markdown.</figcaption>
 </figure>
 
-> ### Explanation
-> * In our `docs` folder two additional files appeared:
->    * all generated `html`-files, which got the filename from their corresponding `md`-files. So we have here `about.html` solely.
->   * `pages.json` holding a list of extended metadata extracted from all markdown files. At that time it contains an array literal including metadata of a single `page`-file now.
-> * A new `theme` folder was created inside of `docs`. It contains
->   * `template.json`, which holds the default templates for generating `html`-files from `md`-files.
->   * a single stylesheet file `styles.css` used by `html`-files.
+> ### Explication
+> * Dans notre dossier `docs`, deux fichiers supplémentaires sont apparus:
+> * tous les fichiers `html` générés, qui ont obtenu le nom de fichier de leurs fichiers` md` correspondants. Nous avons donc ici «about.html» uniquement.
+> * `pages.json` contenant une liste de métadonnées étendues extraites de tous les fichiers markdown. À ce moment-là, il contient maintenant un tableau littéral comprenant les métadonnées d'un seul fichier `page`.
+> * Un nouveau dossier `theme` a été créé à l'intérieur de` docs`. Il contient
+> * `template.json`, qui contient les modèles par défaut pour générer des fichiers` html` à partir de fichiers `md`.
+> * un seul fichier de feuille de style `styles.css` utilisé par les fichiers` html`.
 >
-> If you want to extend this directory structure, add files or modify your templates &ndash; maybe you want to add some scripts &ndash; you can do this manually at any time from now on. `μjam` won't touch your folder structure and templates anymore. This was an initial one-time action only.
+> Si vous souhaitez étendre cette structure de répertoires, ajoutez des fichiers ou modifiez vos modèles & ndash; peut-être voulez-vous ajouter des scripts & ndash; vous pouvez le faire manuellement à tout moment à partir de maintenant. `μjam` ne touchera plus la structure de vos dossiers et vos modèles. C'était une action initiale unique seulement.
 
-Now you can view your first web page in the browser of your choice.
+Vous pouvez maintenant afficher votre première page Web dans le navigateur de votre choix.
 
-6. *Drag 'n drop* `about.html` from the editor's Explorer View (Fig. 6) into the browser's adress bar ... and voilà.
+6. * Glissez 'n drop * `about.html` de la vue Explorateur de l'éditeur (Fig. 6) dans la barre d'adresse du navigateur ... et voilà.
 
 <figure>
   <img src="./img/mu-jam.07.png">
-  <figcaption>Fig. 7: About page &ndash; viewed in browser.</figcaption>
+  <figcaption>Fig. 7: À propos de la page &ndash; vu dans le navigateur.</figcaption>
 </figure>
 
 
-### 2.2 `article` Documents
+### 2.2 Documents `article`
 
-We want to maintain a series of `article` documents, possibly as posts for use with a weblog.
+Nous voulons maintenir une série de documents «article», éventuellement sous forme de messages à utiliser avec un blog.
 
-> ### Information
->  `article` documents are not so much different from `page` documents. In the *front matter metadata* we need to have a `date` member. Adding a `description` member is recommended. 
+> ### Informations
+> Les documents `article` ne sont pas tellement différents des documents` page`. Dans les * métadonnées préliminaires *, nous devons avoir un membre `date`. L'ajout d'un membre `description` est recommandé.
 
-The workflow is illustrated now by the creation of two articles:
+Le workflow s'illustre désormais par la création de deux articles:
 
-1. Open a new file via `File > New File` (<kbd>Ctrl</kbd> + <kbd>N</kbd>).
-2. Copy and paste the following text into that window (<kbd>Ctrl</kbd> + <kbd>C</kbd>, <kbd>Ctrl</kbd> + <kbd>V</kbd>)
-3. Save it to file `one.md` in the `docs` directory (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>).
+1. Ouvrez un nouveau fichier via `Fichier> Nouveau fichier` (<kbd> Ctrl </kbd> + <kbd> N </kbd>).
+2. Copiez et collez le texte suivant dans cette fenêtre (<kbd> Ctrl </kbd> + <kbd> C </kbd>, <kbd> Ctrl </kbd> + <kbd> V </kbd>)
+3. Enregistrez-le dans le fichier `one.md` dans le répertoire` docs` (<kbd> Ctrl </kbd> + <kbd> Maj </kbd> + <kbd> S </kbd>).
 
 `one.md`
+
 ```
 ---
 "layout": "article",
@@ -191,11 +195,10 @@ The workflow is illustrated now by the creation of two articles:
 "description": "This is the first article",
 "date": "2020-03-22"
 ---
-### Abstract
-This is the first article. We are mainly testing `syntax highlighting` here.
+### Abstrait
+Ceci est le premier article. Nous testons principalement la «coloration syntaxique» ici.
 
-## 1. Syntax highlighting
-
+## 1. Mise en évidence de la syntaxe
 ### 1.1 Html
 ```html
 <!doctype html>
@@ -214,11 +217,12 @@ This is the first article. We are mainly testing `syntax highlighting` here.
 `` `
 ```
 
-4. Open a new file via `File > New File` (<kbd>Ctrl</kbd> + <kbd>N</kbd>).
-5. Copy and paste the following text into that window (<kbd>Ctrl</kbd> + <kbd>C</kbd>, <kbd>Ctrl</kbd> + <kbd>V</kbd>)
-6. Save it to file `two.md` in the `docs` directory (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>).
+4. Ouvrez un nouveau fichier via `Fichier> Nouveau fichier` (<kbd> Ctrl </kbd> + <kbd> N </kbd>).
+5. Copiez et collez le texte suivant dans cette fenêtre (<kbd> Ctrl </kbd> + <kbd> C </kbd>, <kbd> Ctrl </kbd> + <kbd> V </kbd>)
+6. Enregistrez-le dans le fichier `two.md` dans le répertoire` docs` (<kbd> Ctrl </kbd> + <kbd> Maj </kbd> + <kbd> S </kbd>).
 
 `two.md`
+
 ```
 ---
 "layout": "article",
@@ -226,14 +230,15 @@ This is the first article. We are mainly testing `syntax highlighting` here.
 "description": "This is the second article",
 "date": "2020-03-23"
 ---
-### Abstract
-This is the second article. Here we are testing math formulas and embedded `svg`.
+```
+### Abstrait
+Ceci est le deuxième article. Ici, nous testons des formules mathématiques et des `svg` intégrés.
 
-## 1. Testing
+## 1. Test
 
-### 1.1 Math Formulas
+### 1.1 Formules mathématiques
 
-[Euler's identity](https://en.wikipedia.org/wiki/Euler%27s_identity) is said to be one of the most beautiful formulas, as it collects the most fundamental numbers in mathematics in a compact equation (1).
+[Identité d'Euler](https://en.wikipedia.org/wiki/Euler%27s_identity) est considérée comme l'une des plus belles formules, car elle rassemble les nombres les plus fondamentaux en mathématiques dans une équation compacte (1).
 
 $$e^{i\pi} + 1 = 0$$ (1)
 
@@ -245,28 +250,27 @@ $$e^{i\pi} + 1 = 0$$ (1)
 </svg>
   <figcaption>Fig. 1: SVG Star</figcaption>
 </figure>
-```
 
 <figure>
   <img src="./img/mu-jam.08.png">
-  <figcaption>Fig. 8: Article document 'two.md'.</figcaption>
+  <figcaption>Fig. 8: Document article 'two.md'.</figcaption>
 </figure>
 
-> ### Explanation
-> While having saved these two `*.md` documents for the first time, their corresponding `*.html` documents were created and also their *front matter metadata* have been extracted, slightly extended and appended to the list of the pages metadata in `pages.json`. Please note, that `μjam` will update metadata during consecutive files storages and even remove them together with the `*.html` files, when you delete a markdown file manually from the file system.
+> ### Explication
+> Tout en ayant sauvegardé ces deux documents `* .md` pour la première fois, leurs documents` * .html` correspondants ont été créés et leurs * métadonnées de base * ont également été extraites, légèrement étendues et ajoutées à la liste des métadonnées des pages dans `pages.json`. Veuillez noter que `μjam` mettra à jour les métadonnées pendant le stockage de fichiers consécutifs et les supprimera même avec les fichiers` * .html`, lorsque vous supprimez manuellement un fichier de démarquage du système de fichiers.
 >
-> You also might have noticed that we mixed LaTeX math and SVG markup into our markdown text of file `two.md` (Fig. 8).
+> Vous avez peut-être aussi remarqué que nous avons mélangé le balisage LaTeX math et SVG dans notre texte de démarque du fichier `two.md` (Fig. 8).
 
 ### 2.3 `index` Document
 
-Let's create the homepage of our website now.
+Créons maintenant la page d'accueil de notre site Web.
 
-> ### Information
-> Any markdown document marked as `"index"` in its *frontmatter layout* entry will get appended a list of all `article`s immediately after its normal `content` section. 
+> ### Informations
+> Tout document démarqué marqué comme «" index "» dans son entrée * mise en page avant * se verra ajouter une liste de tous les «articles» immédiatement après sa section «content» normale.
 
-1. Open a new file via `File > New File` (<kbd>Ctrl</kbd> + <kbd>N</kbd>).
-2. Copy and paste the following text into that window (<kbd>Ctrl</kbd> + <kbd>C</kbd>, <kbd>Ctrl</kbd> + <kbd>V</kbd>)
-3. Save it to file `index.md` in the `src` directory (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>).
+1. Ouvrez un nouveau fichier via `Fichier> Nouveau fichier` (<kbd> Ctrl </kbd> + <kbd> N </kbd>).
+2. Copiez et collez le texte suivant dans cette fenêtre (<kbd> Ctrl </kbd> + <kbd> C </kbd>, <kbd> Ctrl </kbd> + <kbd> V </kbd>)
+3. Enregistrez-le dans le fichier `index.md` du répertoire` src` (<kbd> Ctrl </kbd> + <kbd> Shift </kbd> + <kbd> S </kbd>).
 
 ```
 ---
@@ -279,89 +283,94 @@ Let's create the homepage of our website now.
 "category": ["web","math","graphics"]
 ---
 
-This is a demo site containing some articles. It was made by **μjam**, a minimalistic static site generator.
+Ceci est un site de démonstration contenant quelques articles. Il a été réalisé par **μjam**, un générateur de site statique minimaliste.
 ```
 <figure>
   <img src="./img/mu-jam.09.png">
-  <figcaption>Fig. 9: Index page.</figcaption>
+  <figcaption>Fig. 9: Page index .</figcaption>
 </figure>
 
-> ### Explanation
-> Since both `article` documents have `abstract` sections, that content is used for articles' short description. In case of a missing `abstract` section, the `description` entry from *frontmatter metadata* would have been taken instead.
+> ### Explication
+> Puisque les deux documents `article` ont des sections` abstract`, ce contenu est utilisé pour la brève description des articles. Dans le cas d'une section `abstract` manquante, l'entrée` description` de * frontmatter metadata * aurait été prise à la place.
 
-The content generation process of the demo site is complete now.
+Le processus de génération de contenu du site de démonstration est maintenant terminé.
 
 
-## 3. Publish to the World
+## 3. Publiez dans le monde
 
-We want to use well known [GitHub](https://www.edureka.co/blog/how-to-use-github/) here.
-And we want this *version control hosting platform* be connected with our local project repository via `vscode`.
+Nous voulons bien utiliser ici [GitHub](https://www.edureka.co/blog/how-to-use-github/).
+Et nous voulons que cette *plateforme d'hébergement de contrôle de version* soit connectée à notre référentiel de projet local via `vscode`.
+
+> ### Informations
+> *GitHub* en tant que plate-forme très utilisée est un service de partage de code. Mais contrairement aux simples fournisseurs de stockage en nuage, GitHub prend principalement en charge le travail de projet, où les fichiers sont régulièrement modifiés, téléchargés et doivent être gérés via le contrôle de version. C'est exactement ce que nous voulons avoir avec notre projet de site Web et le meilleur de tous: GitHub nous fournit un référentiel en ligne gratuitement. Nous avons alors simplement un espace de stockage, appelé * repository *, où notre projet réside sur le web. Ce n'est pas un serveur Web classique. Dans le sens de * Jam *, c'est un CDN & ndash; * réseau de diffusion de contenu *.
+
+### 3.1 Création d'un dépot local git
+
+[Git](https://git-scm.com/) est un puissant outil de contrôle de version, qui nous permet de créer et de gérer un *dépôt local*.
 
 > ### Information
-> *GitHub* as a highly used platform is a code sharing service. But in contrast to mere cloud storage providers GitHub primarily supports project work, where files are regularly edited, uploaded and needed to be managed through version control. This is exactly, what we want to have with our website project and best of all: GitHub provides us with an online repository for free. We then simply have a storage space, called *repository*, where our project resides on the web. This is not a classical webserver. In the sense of *Jam* it is a CDN &ndash; *content delivery network*.
-
-### 3.1 Creating a Local Git Repository
-
-[Git](https://git-scm.com/) is a powerful version control tool, which allows us to create and manage a *local repository*. 
-
-> ### Information
-> With it we then have a **version control tool** *Git* collaborating with the **version control hosting platform** *GitHub*. 
-And Visual Studio Code comes with *source control integration* and especially has excellent [Git support](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support). 
+> Avec elle, nous avons alors un **outil de contrôle des versions** *Git* collaborant avec la **plateforme d'hébergement de contrôle des versions** *GitHub*. 
+Et Visual Studio Code est livré avec une *intégration de contrôle de source* et dispose surtout d'un excellent [support Git] (https://code.visualstudio.com/docs/editor/versioncontrol#_git-support). 
 
 > ### **Important** !
-> Chances are good that Git is already installed on your local machine. Input `'> git --version'` at your terminal command line. will show you the current version installed.
-Otherwise, if you are told that `git` is unknown, you need to install it. Don't worry, this can be easily done by visiting that [download site](https://git-scm.com/downloads). I will wait here.
+> Il y a de fortes chances que Git soit déjà installé sur votre machine locale. Saisissez `'> git --version'` sur la ligne de commande de votre terminal. Vous verrez la version actuelle installée.
+Sinon, si on vous dit que "git" est inconnu, vous devez l'installer. Ne vous inquiétez pas, cela peut être fait facilement en visitant ce [site de téléchargement] (https://git-scm.com/downloads). J'attendrai ici.
 
-1. Navigating to the third symbol of the left vertical [*Activity Bar*](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout) ... press it.
-2. Press the blue button named `'Initialize Repository'`.
-3. Type in the commit message `'Initial commit'`.
-4. <kbd>Ctrl</kbd> + <kbd>Enter</kbd> or ...
-    * Move the mouse over `'CHANGES'` saying *Stage All Changes*.
-    * Press the `+` sign.
-    * Press the *check mark*.
+Traduit avec www.DeepL.com/Translator (version gratuite)
+
+1. Naviguer vers le troisième symbole de la barre verticale de gauche [*Activity Bar*] (https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout) ... appuyez dessus.
+2. Appuyez sur le bouton bleu nommé "Initialize Repository".
+3. Tapez le message de commit "Initial commit".
+4. <kbd>Ctrl</kbd> + <kbd>Enter</kbd> ou ...
+    * Déplacez la souris sur " CHANGES " en disant " Stage All Changes ".
+    * Appuyez sur le signe " + ".
+    * Appuyez sur le *coche*.
+
+Traduit avec www.DeepL.com/Translator (version gratuite)
 
 <figure>
   <span><img src="./img/mu-jam.10-1.png">&nbsp;&nbsp;<img src="./img/mu-jam.10-2.png">&nbsp;&nbsp;<img src="./img/mu-jam.10-3.png"></span>
-  <figcaption>Fig. 10: Initialize local git repository</figcaption>
+  <figcaption>Fig. 10: Initialiser le dépôt git local</figcaption>
 </figure>
 
-> ### Explanation
-> * By initializing our local repository we added a hidden directory named `.git` to our project folder. Fortunately, we don't have to worry about it at all. 
-> * In the source control view with step 3 we see our 12 files labeled `U`, which stands for *untracked file*. 
-> * After `Stage All Changes` in step 4 all files were labeled `A` then, meaning *added* to the repository.
-> * After step 5 all files vanished from git view, meaning that git took complete control over their versioning from now on. No changes to files can be seen.
+> ### Explication
+> En initialisant notre dépôt local, nous avons ajouté un répertoire caché nommé "git" à notre dossier de projet. Heureusement, nous n'avons pas à nous en soucier du tout. 
+> * Dans la vue de contrôle des sources avec l'étape 3, nous voyons nos 12 fichiers étiquetés "U", qui signifie *untracked file*. 
+> * Après "Stage All Changes" à l'étape 4, tous les fichiers ont été étiquetés "A", ce qui signifie *ajouté* au dépôt.
+> * Après l'étape 5, tous les fichiers ont disparu de la vue de git, ce qui signifie que git a pris le contrôle complet de leur version à partir de maintenant. Aucune modification des fichiers n'est visible.
 > 
-> To learn more here, I recommend reading [1](#1) [4] and [5].
+> Pour en savoir plus, je vous recommande de lire [1](#1) [4] et [5].
 
-How helpful git now is for us becomes apparent, when we change the content of ... say `one.md` and then save the file (<kbd>Ctrl</kbd> + <kbd>S</kbd>).
+Traduit avec www.DeepL.com/Translator (version gratuite)
+
+L'utilité de git pour nous est évidente, lorsque nous modifions le contenu de ... dites "one.md" et enregistrez le fichier (<kbd>Ctrl</kbd> + <kbd>S</kbd>).
 
 <figure>
   <img src="./img/mu-jam.11.png">
   <figcaption>Fig. 11: Index page.</figcaption>
 </figure>
 
-> ### Explanation
-> The git view shows four files labeled `M`, meaning *modified*. 
-> 1. We changed `one.md` manually. 
-> 2. While saving it, `one.html` was newly created/overwritten.
-> 3. `pages.json` was modified automatically.
-> 4. Since `one.md` is an `article` file, the article list of `index.html` is potentially affected and file `index.html` was updated.
+> ### Explication
+> La vue de git montre quatre fichiers étiquetés "M", ce qui signifie *modifié*. 
+> 1. Nous avons modifié `one.md` manuellement. 
+> 2. Lors de la sauvegarde, `one.html` a été nouvellement créé/écrit.
+> 3. le fichier `pages.json` a été modifié automatiquement.
+> 4. Puisque `one.md` est un fichier `article`, la liste d'articles de `index.html` est potentiellement affectée et le fichier `index.html` a été mis à jour.
 >
-> Steps 1-3 are always performed under the hood by **μjam** on markdown file storage.
+> Les étapes 1 à 3 sont toujours effectuées sous le capot par **μjam** sur le stockage des fichiers de démarque.
 
-We can again directly commit these changes now or do that later, while going on and continue to work on other markdown source files.
+Nous pouvons à nouveau valider directement ces modifications maintenant ou le faire plus tard, tout en continuant à travailler sur d'autres fichiers sources markdown.
 
 
-### 3.2 Online Repository
+### 3.2 Dépôt (Repository) en ligne
 
-You want to see your pages online now? So you need a personal *user GitHub account* for proceeding.
+Vous voulez voir vos pages en ligne maintenant ? Vous avez donc besoin d'un compte GitHub *utilisateur personnel* pour pouvoir continuer.
 
 > ### **Important** !
-> If you do not have a personal user GitHub account, you need to [sign up for a new free GitHub account here](https://help.github.com/en/github/getting-started-with-github/signing-up-for-a-new-github-account) .
-> Please also note, that you are requested to provide a working email address during verification process.
+> Si vous n'avez pas de compte GitHub personnel, vous devez [créer un nouveau compte GitHub gratuit ici] (https://help.github.com/en/github/getting-started-with-github/signing-up-for-a-new-github-account) .
+> Veuillez également noter qu'il vous est demandé de fournir une adresse électronique valide pendant la procédure de vérification.
 
-Now that you are the owner `<username>` of a GitHub account ...
-
+Maintenant que vous êtes le propriétaire `<nom d'utilisateur>` d'un compte GitHub ...
 1. Navigate your personal browser to `https://github.com/<username>`.
 2. In the upper-right corner of that GitHub page, use the `+` drop-down menu, and select `New repository`.
 
@@ -370,42 +379,42 @@ Now that you are the owner `<username>` of a GitHub account ...
   <figcaption>Fig. 12: Homepage of your GitHub account.</figcaption>
 </figure>
 
-3. Fill out the formular ...
-    * Take a short, memorable `<repository name>` like `'first'`.
-    * Description: `'First microjam powered web site'` or similar text.
-    * Choose *public* or *private*.
-    * Leave the rest as it is.
-    * Press button *Create repositiory*.
+3. Remplissez le formulaire ...
+    * Prenez un nom court et mémorable comme " premier ".
+    * Description : "Premier site web alimenté par microjam" ou un texte similaire.
+    * Choisissez *public* ou *privé*.
+    * Laissez le reste tel quel.
+    * Appuyez sur le bouton *Create repositiory*.
 
 <figure>
   <img src="./img/mu-jam.13.png">
   <figcaption>Fig. 13: Formular: Create a new repository.</figcaption>
 </figure>
 
-3. In a new browser tab/window navigate to `https://api.github.com/users/<username>` .
-4. Copy your `<github user id>` from the second line (a series of 6 or more decimal digits) (<kbd>Ctrl</kbd> + <kbd>C</kbd>) [3].
-5. In the terminal window (on the command line), type:    
+3. Dans un nouvel onglet/fenêtre du navigateur, naviguez jusqu'à `https://api.github.com/users/<nom d'utilisateur>` .
+4. Copiez votre `<github user id>` à partir de la deuxième ligne (une série de 6 chiffres décimaux ou plus) (<kbd>Ctrl</kbd> + <kbd>C</kbd>) [3].
+5. Dans la fenêtre du terminal (sur la ligne de commande), tapez :    
 ```
 > git config --global user.name <github user id>
 > git remote add origin https://github.com/<username>/<repository name>.git
 > git push -u origin master
 ```
-> ### Explanation
-> Please note, that use of these terminal commands is necessary for the first time file transfer to GitHub only. So having done that once, you can forget it forever.
+> ### Explication
+> Veuillez noter que l'utilisation de ces commandes de terminal est nécessaire pour le premier transfert de fichiers vers GitHub uniquement. Ainsi, après avoir fait cela une fois, vous pouvez l'oublier pour toujours.
 
-The result of that action on your GitHub account page will be something like this ... (refresh page!)
+Le résultat de cette action sur votre page de compte GitHub sera quelque chose comme ceci ... (rafraîchissez la page !)
 
 <figure>
   <img src="./img/mu-jam.14.png">
   <figcaption>Fig. 14: Successfully pushed our repository to GitHub.</figcaption>
 </figure>
 
-We will take care about the *README* in a minute. Now we can't wait to see our website online.
+Nous nous occuperons de la *README* dans une minute. Nous sommes impatients de voir notre site web en ligne.
 
-6. Select `settings` on your GitHub account page.
-7. Scroll down to `GitHub Pages`.
-8. In `Select source` set checkmark at `master branch / docs folder`. 
-9. Navigate to the url shown at `'Your site is published at'`. 
+6. Sélectionnez "Paramètres" sur la page de votre compte GitHub.
+7. Faites défiler vers le bas jusqu'à "GitHub Pages".
+8. Dans "Select source", cochez la case "master branch / docs folder". 
+9. Naviguez jusqu'à l'url indiquée à ``Votre site est publié à``. 
 
 <figure>
   <img src="./img/mu-jam.15-1.png">
@@ -417,18 +426,18 @@ We will take care about the *README* in a minute. Now we can't wait to see our w
 **Congrats, your first website is online now !**
 
 
-### 3.3 The Final Workflow
+### 3.3 Le flux de travail final
 
-I would like to show you how working at your website looks like from now on. We will return to our `vscode` editor and ...
+J'aimerais vous montrer à quoi ressemble le travail sur votre site web à partir de maintenant. Nous allons revenir à notre éditeur de "vscode" et ...
 
-1. Add a `readme.md` file (content below) as requested and save (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>).
+1. Ajouter un fichier `readme.md` (contenu ci-dessous) comme demandé et sauvegarder (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>).
 ```
-# A minimal sample repository for *&mu;jam*
+# Un dépôt d'échantillons minimal pour *&mu;jam*
 ```
-2. Modify the content of `one.md` again and save (<kbd>Ctrl</kbd> + <kbd>S</kbd>).
-3. Type in a *commit message* `'Add readme'` (<kbd>Ctrl</kbd> + <kbd>Enter</kbd>).
-4. In a possibly upcoming `vscode` message window `Would you like to automatically ...` select `Always` .
-5. In status bar select either the little `cloud` or the `up-arrow` symbol for uploading the changed files to GitHub.
+2. Modifiez à nouveau le contenu de `one.md` et sauvegardez (<kbd>Ctrl</kbd> + <kbd>S</kbd>).
+3. Saisissez un *message de confirmation* "Add readme"` (<kbd>Ctrl</kbd> + <kbd>Enter</kbd>).
+4. Dans une éventuelle fenêtre de message `vscode` à venir, `Voudriez-vous automatiquement ...` sélectionner `Toujours` .
+5. Dans la barre d'état, sélectionnez soit le petit "nuage", soit le symbole "flèche vers le haut" pour télécharger les fichiers modifiés sur GitHub.
 
 <figure>
   <img src="./img/mu-jam.16-1.png">
@@ -441,17 +450,17 @@ I would like to show you how working at your website looks like from now on. We 
   <figcaption>Fig. 16: Workflow: Adding 'readme.md' and modifying 'one.md'.</figcaption>
 </figure>
 
-That's it. Please verify the arrival of the readme file at Github and the successful update of your website.
+C'est tout. Veuillez vérifier l'arrivée du fichier readme à Github et la bonne mise à jour de votre site web.
 
-Steps `2-3-5` above i.e. 
+Etapes `2-3-5` ci-dessus c'est-à-dire 
 
-* modify content 
-* type commit message
-* upload to GitHub
+* modifier le contenu 
+* type de message d'engagement
+* téléchargement vers GitHub
 
-is all you need to do from now on. 
+est tout ce que vous devez faire à partir de maintenant. 
 
-Good question &ndash; thanks &ndash; this installation guide was in fact authored by **&mu;jam** &ndash; during a process called [*dogfooding*](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) `:)`.
+Bonne question &ndash ; merci &ndash ; ce guide d'installation a en fait été rédigé par **&mu;jam** &ndash ; au cours d'un processus appelé [*dogfooding*](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) ` :)`.
 
 *Happy publishing ...*   
 `--`   

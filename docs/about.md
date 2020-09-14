@@ -2,6 +2,6 @@
 "layout": "page",
 "title": "About."
 ---
-# About this Site 
+# A propos de ce site 
   
-This site was created as a simple collection of markdown files using minimalistic *Static Site Generator* **&mu;jam**.
+Ce site a été crée sous la forme d'une simple collection de fichiers de démarque à l'aide du minimaliste *Static Site Generator* **&mu;jam**.

@@ -11,72 +11,72 @@
 
 # Usage
 
-## Prerequisites
+## Pré-requis
 
-It is assumed, that you 
-* have basic knowledge, how to use [*Visual Studio Code*](https://code.visualstudio.com/).
-* successfully [installed](./installationGuide.html) **&mu;Jam** extension to VSCode.
+On suppose que vous
+* avez des connaissances de base, comment utiliser [*Visual Studio Code*](https://code.visualstudio.com/).
+* avez [installé](./installationGuide.html) avec succès **&mu;Jam** extension to VSCode.
 
 ## Activation
 
-&mu;Jam is an extension to VSCode and VSCode will activate it under certain conditions. As &mu;Jam deals primarily &ndash; or more precise exclusively &ndash; with markdown files, it will get activated, when you either
+&mu;Jam est une extension de VSCode et VSCode l'activera sous certaines conditions. As & mu; Jam traite principalement & ndash; ou plus précis exclusivement & ndash; avec les fichiers markdown, il sera activé, lorsque vous
 
-* open your first markdown file, or ...
-* start VSCode with a markdown file as its active document
+* ouvrez votre premier fichier de démarque, ou ...
+* démarrez VSCode avec un fichier markdown comme document actif
 
 <figure>
   <img src="./img/mu-jam.use.01.png" alt="md = make directory">
-  <figcaption>Fig. 1: &mu;Jam activation message.</figcaption>
+  <figcaption>Fig. 1: message d'activation &mu;Jam .</figcaption>
 </figure>
 
-You will see an activation message in the lower right corner of VSCode window.
-You do not necessarily have your repository folder opened in VSCode. &mu;Jam will work with single file mode also.
+Vous verrez un message d'activation dans le coin inférieur droit de la fenêtre VSCode.
+Votre dossier de référentiel n'est pas nécessairement ouvert dans VSCode. & mu; Jam fonctionnera également en mode fichier unique.
 
-But ... having &mu;Jam activated properly does not mean, it works with every markdown file. It accepts files 
+Mais ... avoir activé correctement & mu; Jam ne signifie pas que cela fonctionne avec tous les fichiers de démarque. Il accepte les fichiers
 
-* being in a `docs` directory or one of its subdirectories `docs/**` and ...
-* belonging to a repository having an entry `"microjam": {...}` in its `package.json`
+* étant dans un répertoire `docs` ou l'un de ses sous-répertoires ` docs / **` et ...
+* appartenant à un dépôt ayant une entrée `" microjam ": {...}` dans son `package.json`
 
-only.
+seulement.
 
-## Generating Webpages
+## Générer des pages Web
 
-&mu;Jam can do exactly *two things* for you:
+&mu;Jam peut faire exactement *deux choses* pour toi:
 
-* generate/update a `html` file from a single `md` file ...
-* generate/update `html` files from **all** `md` files in a repository
+* générer / mettre à jour un fichier `html` à partir d'un seul fichier` md` ...
+* générer / mettre à jour les fichiers `html` à partir de ** tous les ** fichiers` md` dans un référentiel
 
-### Single Markdown Files
+### Fichiers uniques Markdown
 
-Whenever you are working at a markdown file and save it via
+Chaque fois que vous travaillez sur un fichier Markdown et enregistrez-le via
 
 * menu `File > Save As` or (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>) or ...
 * menu `File > Save` or (<kbd>Ctrl</kbd> + <kbd>S</kbd>)
 
-its corresponding `html` file will be generated automatically by &mu;Jam, which will also update the `pages.json` file and possibly some *index* files, if you happened to have modified a `"layout":"article"` document.
+son fichier `html` correspondant sera généré automatiquement par &mu;Jam, qui mettra également à jour le fichier `pages.json` et éventuellement certains fichiers *index*, si vous aviez modifié un `"layout": "article"` document.
 
 <figure>
   <img src="./img/mu-jam.use.02.png">
-  <figcaption>Fig. 2: &mu;Jam Html saved message.</figcaption>
+  <figcaption>Fig. 2: &mu;Jam Html sauvegarde les messages.</figcaption>
 </figure>
 
-> **Note:**   
->That `File > Save` command **only** saves its markdown file, if it has been modified since its last storage command. Only in this case the corresponding `html` file is updated.
+> ** Remarque: **
+> Cette commande `Fichier> Enregistrer` ** uniquement ** enregistre son fichier Markdown, s'il a été modifié depuis sa dernière commande de stockage. Ce n'est que dans ce cas que le fichier `html` correspondant est mis à jour.
 
-In order to assist you to *force an update of a single file*, &mu;Jam provides us with the command <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>H</kbd> (think **H**tml). This is also available via different menus (see below).
+Afin de vous aider à * forcer la mise à jour d'un seul fichier *, & mu; Jam nous fournit la commande <kbd> Ctrl </kbd> & nbsp; + & nbsp; <kbd> K </kbd> & nbsp; &nbsp; <kbd> H </kbd> (pensez à **H**tml). Ceci est également disponible via différents menus (voir ci-dessous).
 
-### All Markdown Files
+### Tout fichier Markdown
 
-There might come up the necessity to rebuild all `html` files. One scenario is, we just had modified our templates in `template.js`.
+Il peut s'avérer nécessaire de reconstruire tous les fichiers `html`. Un scénario est que nous venons de modifier nos modèles dans `template.js`.
 
-To achieve this, we can use the &mu;Jam command <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>A</kbd> (think **A**ll).
+Pour archiver ceci, nous pouvons utiliser la commande &mu;Jam <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>A</kbd> (pensez à **T**out).
 
 <figure>
   <img src="./img/mu-jam.use.03.png">
-  <figcaption>Fig. 3: &mu;Jam command - force rebuild all Html files</figcaption>
+  <figcaption>Fig. 3: Commande &mu;Jam - forcer la reconstruction de tous les fichiers Html</figcaption>
 </figure>
 
-Please note, only the last three rebuilt files are are visible after completion as &mu;Jam messages then.
+Veuillez noter que seuls les trois derniers fichiers reconstruits sont visibles une fois terminés en tant que messages &mu;Jam.
 
 ### Menus
 
@@ -85,52 +85,53 @@ Please note, only the last three rebuilt files are are visible after completion 
   <img src="./img/mu-jam.use.04-2.png"></div><br>
   <img src="./img/mu-jam.use.04-3.png"><br>
   <img src="./img/mu-jam.use.04-4.png">
-  <figcaption>Fig. 4: &mu;Jam commands - accessible through different menus</figcaption>
+  <figcaption>Fig. 4: commandes &mu;Jam - accessible via différents menus</figcaption>
 </figure>
 
-Both &mu;Jam commands are accessible through
+Duex commandes &mu;Jam sont accessibles via
 
-1. Editor context menu (right click) (a)
-2. Editor title menu (b)
-3. VSCode global command palette (c)
-4. Explorer context menu (d)
+1. Menu contextuel de l'éditeur (clic droit) (a)
+2. Menu titre de l'éditeur (b)
+3. Palette de commandes globale VSCode (c)
+4. Menu contextuel de l'explorateur (d)
 
-> **Note:**   
->Menus in VSCode are defined statically with extensions like &mu;Jam. So above menus are always shown while editing any markdown document. But with markdown documents **not** belonging to a valid repository invoking these menu commands will **silently** have no effect.
+> **Remarque:**
+> Les menus dans VSCode sont définis statiquement avec des extensions comme &mu;Jam. Ainsi, les menus ci-dessus sont toujours affichés lors de l'édition de tout document markdown. Mais avec des documents markdown **n'appartenant pas** à un référentiel valide, l'invocation de ces commandes de menu n'aura **silencieusement** aucun effet.
 
-### Manually Remove Files
+### Supprimer manuellement des fichiers
 
-You won't want to remove auto-generated files usually, as they are regularly updated by &mu;Jam. But if you explicitely want to do that, it you can use the explorer view (Fig. 5).
+Vous ne voudrez généralement pas supprimer les fichiers générés automatiquement, car ils sont régulièrement mis à jour par & mu; Jam. Mais si vous souhaitez explicitement le faire, vous pouvez utiliser la vue Explorateur (Fig. 5).
 
 <figure>
   <img src="./img/mu-jam.use.05.png">
-  <figcaption>Fig. 5: Explorer view - manually remove these files only</figcaption>
+  <figcaption>Fig. 5: 
+Vue Explorateur - supprimez manuellement ces fichiers uniquement</figcaption>
 </figure>
 
-* It is safe to remove all `*.html` files as well as `pages.json` (<kbd>Delete</kbd> or <kbd>Shift</kbd>+<kbd>Delete</kbd>).
-* If you manually remove a markdown file, its corresponding `html` file will be consistently deleted by &mu;Jam during next command execution. `pages.json` will be also updating accordingly.
-* You can delete the `docs/theme` folder and even the `.vscode` directory. &mu;Jam will generate them again using default content. But be aware, that possible customizations or ccopies get lost then. You usually don't want to do that.
-* You shouldn't delete any other files from your repository, except you know, what you are doing.
+* Il est sûr de supprimer tous les fichiers `*.html` ainsi que `pages.json` (<kbd> Supprimer </kbd> ou <kbd> Shift </kbd> + <kbd> Supprimer </kbd>).
+* Si vous supprimez manuellement un fichier markdown, son fichier `html` correspondant sera systématiquement supprimé par &mu;Jam lors de la prochaine exécution de la commande. `pages.json` sera également mis à jour en conséquence.
+* Vous pouvez supprimer le dossier `docs/theme` et même le répertoire `.vscode` .&mu;Jam les générera à nouveau en utilisant le contenu par défaut. Mais sachez que les personnalisations ou copies possibles se perdent alors. Vous ne voulez généralement pas faire ça.
+* Vous ne devez supprimer aucun autre fichier de votre référentiel, sauf que vous savez ce que vous faites.
 
-> **Note:**   
->Sort order of files by *type* makes sense in explorer view, but it's not VSCode's default order. So &mu;Jam adds an entry `"explorer.sortOrder":"type"` to user settings file `.vscode/settings.json`. You can add more individual settings to that file.
+> ** Remarque: **
+> L'ordre de tri des fichiers par *type* a du sens dans la vue de l'explorateur, mais ce n'est pas l'ordre par défaut de VSCode. Ainsi &mu;Jam ajoute une entrée `""explorer.sortOrder":"type"` au fichier de paramètres utilisateur `.vscode/settings.json`. Vous pouvez ajouter plus de paramètres individuels à ce fichier.
 
-## Editing Markdown Files
+## Editer und fichier Markdown
 
-It is not much to say here, since markdown editing is excellently done by VSCode editor. There are only a few assisting &mu;Jam features worth mentioning.
+Il n'y a pas grand-chose à dire ici, car l'édition markdown est parfaitement effectuée par l'éditeur VSCode. Seules quelques fonctionnalités d'assistance de & mu; Jam méritent d'être mentionnées.
 
-### Frontmatter Snippet
+### Extrait de frontmatter
 
-When starting a new markdown file, &mu;Jam assists you by inserting a partial filled *frontmatter* template at current editor location.
+Lors du démarrage d'un nouveau fichier markdown, &mu;Jam vous assiste en insérant un modèle *frontmatter* partiellement rempli à l'emplacement actuel de l'éditeur.
 
 <figure>
   <img src="./img/mu-jam.use.06.png">
-  <figcaption>Fig. 6: Auto-create frontmatter snippet sceleton</figcaption>
+  <figcaption>Fig. 6: Création automatique d'un sceleton d'extrait de frontmatter</figcaption>
 </figure>
 
-Simply type <kbd>Ctrl</kbd>+<kbd>k</kbd> <kbd>-</kbd> for getting this.
+Simple type <kbd>Ctrl</kbd>+<kbd>k</kbd> <kbd>-</kbd> pour avoir ça.
 
-### Table Of Content Snippet
+### Extrait de table de contenu
 
 When finishing a markdown document containing several headings possibly in multiple levels, we would welcome an automatic generation of a table of contents (toc). This is inserted at current editor location by &mu;Jam at our fingertips.
 
@@ -141,55 +142,55 @@ When finishing a markdown document containing several headings possibly in multi
 
 Simply type <kbd>Ctrl</kbd>+<kbd>k</kbd> <kbd>t</kbd> (think &nbsp;**t**oc) for getting this.
 
-> **Note:**   
-> The table of content inserted is static and not configurable, i.e. minimalistic:
-> * If you do not want to have a heading in the toc (maybe 'Contents'), simple delete it from the generated list in the markdown document.
-> * Generating certain toc levels only is not supported. Simply remove the unwanted entries manually then.
-> * If you edit the text of a heading, the toc won't update automatically. Recreate the toc then manually.
-> * Headings in markdown code sections are incorrectly inserted also. You need to remove them manually.
+> ** Remarque: **
+> La table des matières insérée est statique et non configurable, c'est-à-dire minimaliste:
+> * Si vous ne voulez pas avoir d'en-tête dans le toc (peut-être «Contenu»), supprimez-le simplement de la liste générée dans le document markdown.
+> * La génération de certains niveaux toc uniquement n'est pas prise en charge. Supprimez simplement les entrées indésirables manuellement.
+> * Si vous modifiez le texte d'un titre, la toc ne se mettra pas à jour automatiquement. Recréez la toc puis manuellement.
+> * Les entêtes des sections de code markdown sont également insérés de manière incorrecte. Vous devez les supprimer manuellement.
 
-### Navigation List Snippet
+### Extrait de liste de navigation
 
-Sometimes we do not want to have an internal table of content, but an external navigation list. With that we might compose a navigation sidebar. In this case we want to have explicite local `html` url's, as in ...
+Parfois, nous ne voulons pas avoir de table des matières interne, mais une liste de navigation externe. Avec cela, nous pourrions composer une barre latérale de navigation. Dans ce cas, nous voulons avoir des URL locales explicites `html`, comme dans ...
 
 ```md
 - [Installation](installationGuide.html#installation)
-  - [A New Project](installationGuide.html#a-new-project)
-  - [Generating Content](installationGuide.html#generating-content)
-  - [Publish to the World](installationGuide.html#publish-to-the-world)
+  - [un nouveau projet](installationGuide.html#a-new-project)
+  - [Generation du Contenu](installationGuide.html#generating-content)
+  - [Publier au monde](installationGuide.html#publish-to-the-world)
 ```
 
-For getting this we type <kbd>Ctrl</kbd>+<kbd>k</kbd> <kbd>n</kbd> (think &nbsp;**n**av).
+Pour obtenir cela, nous tapons <kbd>Ctrl</kbd>+<kbd>k</kbd> <kbd>n</kbd> (think &nbsp;**n**av).
 
-### Permalinks
+### Permaliens
 
-This feature is shamelessly copied from GitHub. In the browser ... whenever you are hovering with your pointer device a heading, a small symbol appears. Hovering then over that symbol, the document-local uri of the heading in question can be copied (right click) and is shown in the status bar at the same time.
+Cette fonctionnalité est copiée sans vergogne depuis GitHub. Dans le navigateur ... chaque fois que vous survolez avec votre pointeur un en-tête, un petit symbole apparaît. En survolant ensuite ce symbole, l'URI local du document de l'en-tête en question peut être copié (clic droit) et affiché dans la barre d'état en même temps.
 
 <figure>
   <img src="./img/mu-jam.use.08.png">
-  <figcaption>Fig. 8: Explorer view - manually remove these files only</figcaption>
+  <figcaption>Fig. 8: Vue Explorateur - supprimez manuellement ces fichiers uniquement</figcaption>
 </figure>
 
-With this feature enabled, your visitors can copy and paste that location and thus link into your pages with the help of these *permalinks*.
+Avec cette fonctionnalité activée, vos visiteurs peuvent copier et coller cet emplacement et ainsi créer un lien dans vos pages à l'aide de ces *permaliens*.
 
-In order to activate this feature, you need to add
+Pour activer cette fonctionnalité, vous devez ajouter
 
 ```markdown
 ---
-"permalink": "#"
+"permaliens": "#"
 ---
 ```
-to your page's frontmatter section. You are allowed to take a character symbol of your choice. `"permalink": true` is also possible, with '#' as the default symbol.
+à la section frontmatter de votre page. Vous êtes autorisé à prendre un symbole de caractère de votre choix. `"permalink": true` est également possible, avec '#' comme symbole par défaut.
 
 ### `markdown-it` Plugins
 
-VSCode uses [markdown-it](https://github.com/markdown-it/markdown-it) as its markdown parser internally and so does &mu;Jam. There are a lot of markdown-it plugins available.
-&mu;Jam potentially supports only two of them at current:
+VSCode utilise [markdown-it](https://github.com/markdown-it/markdown-it) comme son analyseur de démarques en interne, tout comme & mu; Jam. Il existe de nombreux plugins markdown-it disponibles.
+&mu;Jam ne prend en charge que deux d'entre eux actuellement:
 
-* Math plugin `markdown-it-texmath`
-* Footnotes plugin `markdown-it-footnotes`
+* Plugin mathématique `markdown-it-texmath`
+* Plugin de notes de bas de page `markdown-it-footnotes`
 
-Since they are both inactive initially, we can activate them &ndash; if we want &ndash; by appending the following to `.vscode/settings.json` ...
+Comme ils sont tous les deux inactifs au départ, nous pouvons les activer & ndash; si nous voulons & ndash; en ajoutant ce qui suit à `.vscode/settings.json` ...
 
 ```json
 "microjam.markdownItPlugins": {
@@ -201,29 +202,29 @@ Since they are both inactive initially, we can activate them &ndash; if we want 
   "markdown-it-footnote": {}
 }
 ```
-Extending &mu;Jam, in using other markdown-it plugins is possible, but out of the scope of this user manual. 
+Il est possible d'étendre &mu;Jam en utilisant d'autres plugins markdown-it, mais cela sort du cadre de ce manuel de l'utilisateur. 
 
-## Publishing to GitHub
+## Publier sur GitHub
 
-We are assuming here, that you have a valid local `git` and remote GitHub repository already. Read [installation guide](./installationGuide.html) otherwise.
+Nous supposons ici que vous avez déjà un référentiel GitHub local et distant valide. Lire [guide installation](./installationGuide.html) autrement.
 
 <figure>
   <img src="./img/mu-jam.16-4.png">
-  <figcaption>Fig. 16: Workflow: Adding 'readme.md' and modifying 'one.md'.</figcaption>
+  <figcaption>Fig. 16: Workflow: ajout de 'readme.md' et modification 'one.md'.</figcaption>
 </figure>
 
-For publishing your generated or modified files to GitHub, you might want to use the *Source control* view.
+Pour publier vos fichiers générés ou modifiés sur GitHub, vous pouvez utiliser la vue * Contrôle de source *.
 
-* Type in a commit message string.
-* Send it by <kbd>Ctrl</kbd> + <kbd>Enter</kbd>.
-* Press the *up arrow* symbol in the status bar.
+* Tapez une chaîne de message de validation.
+* Envoyez-le par <kbd> Ctrl </kbd> + <kbd> Entrée </kbd>.
+* Appuyez sur le symbole * flèche vers le haut * dans la barre d'état.
 
 
-## The Usual Workflow
+## Le flux de travail habituel
 
-I would like to show you how working at your website looks like, once you installed all and already wrote your markdown files.
+Je voudrais vous montrer à quoi ressemble le travail sur votre site Web, une fois que vous avez tout installé et que vous avez déjà écrit vos fichiers de démarque.
 
-1. You will again open your project directory `first`, which already has the following structure
+1. Vous ouvrirez à nouveau votre répertoire de projet `first`, qui a déjà la structure suivante
 
 ```
 /first
@@ -239,14 +240,12 @@ I would like to show you how working at your website looks like, once you instal
    |_ two.md
 ```
 
-2. Add a `readme.md` file (content below) and save it (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>) to your project root folder. Its content might be somewhat like
-```
-# A minimal sample repository for &mu;Jam
-```
-3. Modify the content of `one.md` and save (<kbd>Ctrl</kbd> + <kbd>S</kbd>).
-4. Type in a *commit message* `'Add readme'` (<kbd>Ctrl</kbd> + <kbd>Enter</kbd>).
-5. In a possibly upcoming `vscode` message window `Would you like to automatically ...` select `Always` .
-6. In the VSCode status bar select either the little `cloud` or the `up-arrow` symbol for uploading the changed files to GitHub.
+2. Ajoutez un fichier `readme.md` (contenu ci-dessous) et enregistrez-le (<kbd> Ctrl </kbd> + <kbd> Shift </kbd> + <kbd> S </kbd>) dans le dossier racine de votre projet. Son contenu pourrait être un peu commeun référentiel d'échantillons minimal pour &mu;Jam.
+
+3. Modifiez le contenu de «one.md» et enregistrez (<kbd> Ctrl </kbd> + <kbd> S </kbd>).
+4. Tapez un * message de validation * `` Ajouter un fichier readme '' (<kbd> Ctrl </kbd> + <kbd> Entrée </kbd>).
+5. Dans une fenêtre de message `vscode` éventuellement à venir` Souhaitez-vous automatiquement ... `sélectionnez` Toujours`.
+6. Dans la barre d'état VSCode, sélectionnez le petit symbole «cloud» ou «flèche vers le haut» pour télécharger les fichiers modifiés sur GitHub.
 
 <figure>
   <img src="./img/mu-jam.16-1.png">
@@ -256,50 +255,50 @@ I would like to show you how working at your website looks like, once you instal
   <img src="./img/mu-jam.16-3.png">
   <br>
   <img src="./img/mu-jam.16-4.png">
-  <figcaption>Fig. 16: Workflow: Adding 'readme.md' and modifying 'one.md'.</figcaption>
+  <figcaption>Fig. 16: Workflow: Ajout de 'readme.md' et modification de 'one.md'.</figcaption>
 </figure>
 
-That's it. Please verify the arrival of the readme file at Github and successful update of your website.
+C'est tout. Veuillez vérifier l'arrivée du fichier readme sur Github et la mise à jour réussie de votre site Web.
 
-Steps `2-3-5` above i.e. 
+Les étapes «2-3-5» ci-dessus, c'est-à-dire
 
-* modify content 
-* type commit message
-* upload to GitHub
+* modifier le contenu
+* type message de validation
+* télécharger sur GitHub
 
-is all you need to do from now on. 
+est tout ce que vous devez faire à partir de maintenant.
 
-Just to mention &ndash; this documentation was authored by **&mu;Jam** during a process called [*dogfooding*](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) `:)`.
+Juste pour mentionner & ndash; cette documentation a été rédigée par **&mu;Jam** au cours d'un processus appelé [*dogfooding*](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) `:)`.
 
-*Happy publishing ...*   
+*Bonne publication ...*   
 
 ## Templates
 
-* [microjam-simple](https://github.com/goessner/microjam-simple) &ndash; A simple website template for μJam
-* [microjam-tufte](https://github.com/goessner/microjam-tufte) &ndash; A Tufte Style Template for μJam
-* [microjam-docs](https://github.com/goessner/microjam-docs) &ndash; A documentation theme for μjam with sidebar
-* [microjam-g2](https://github.com/goessner/microjam-docs) &ndash; A theme for μjam + g2
+* [microjam-simple](https://github.com/goessner/microjam-simple) &ndash; Un modèle de site Web simple pour μJam
+* [microjam-tufte](https://github.com/goessner/microjam-tufte) &ndash; Un modèle de style Tufte pour μJam
+* [microjam-docs](https://github.com/goessner/microjam-docs) &ndash; Un thème de documentation pour μjam avec barre latérale
+* [microjam-g2](https://github.com/goessner/microjam-docs) &ndash; Un theme pour μjam + g2
 
 
 
-## Keyboard Commands 
+## Commandes clavier 
 
 | Command |  Mnemonic  | Menu | Action |
 |:------|:--------|:-----|:----|
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>H</kbd> | **H**tml | &ndash; | Generate single Html file |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>A</kbd> | **A**ll | &ndash; | Generate all Html files |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>-</kbd> | --- | &ndash; | Insert frontmatter template |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>T</kbd> | **T**oC | &ndash; | Insert Table of Contents |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>N</kbd> | **N**av | &ndash; | Copy navigation markdown to clipboard |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>H</kbd> | **H**tml | &ndash; | Générer un seul fichier Html |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>A</kbd> | **A**ll | &ndash; | Generer tous les fichiers Html |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>-</kbd> | --- | &ndash; | Insérer un modèle de frontmatter |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>T</kbd> | **T**oC | &ndash; | Insérer une table des matières |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>N</kbd> | **N**av | &ndash; | Copier le démarque de navigation dans le presse-papiers |
 | |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>V</kbd> | pre**V**iew | &ndash; | Open preview window |
-| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | &ndash; |  &ndash; | Commit Changes |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | **S**ave A**s** |`File > Save As` | Save file as ... |
-| <kbd>Ctrl</kbd> + <kbd>S</kbd> | **S**ave |`File > Save` | Save file |
-| <kbd>Ctrl</kbd> + <kbd>C</kbd> | **C**opy |`Edit > Copy` | Copy text to clipboard |
-| <kbd>Ctrl</kbd> + <kbd>V</kbd> | Paste |`Edit > Paste` | Retrive text from clipboard |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd>&nbsp;&nbsp;<kbd>V</kbd> | pre**V**iew | &ndash; | Ouvrir un preview window |
+| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | &ndash; |  &ndash; | Valider les modifications |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | **S**ave A**s** |`File > Save As` | Enregistrer le fichier sous ... |
+| <kbd>Ctrl</kbd> + <kbd>S</kbd> | **S**ave |`File > Save` | Sauvegarder le fichier |
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | **C**opy |`Edit > Copy` | Copier le texte dans le presse-papiers |
+| <kbd>Ctrl</kbd> + <kbd>V</kbd> | Paste |`Edit > Paste` | Récupérer le texte du presse-papiers |
 
-Apple users will press the <kbd>Cmd</kbd> key instead of the <kbd>Ctrl</kbd> key.
+Les utilisateurs Apple appuieront sur la touche <kbd> Cmd </kbd> au lieu de la touche <kbd> Ctrl </kbd>.
 
 
 ## References 

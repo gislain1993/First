@@ -5,36 +5,41 @@
 
 # A Minimal Jamstack Approach.
 
-* ## &mu; ... what ?
+* ## &mu; ... quoi ?
 
-Greek letter `'μ'` is pronounced `'my'` as in `micro` or `'mee'` according to [modern Greek](https://www.thoughtco.com/the-greek-alphabet-1705558) . So simply call it *'microjam'* or *'myjam'*.
+La lettre grecque `'μ'` se pronoce `'my'` comme `micro` ou `'mee'` selon [Grecque moderne](https://www.thoughtco.com/the-greek-alphabet-1705558) . Il suffit donc de l'appeler *'microjam'* ou *'myjam'*.
 
 * ## ok ... myjam ?
 
-`'jam'` comes from `Jamstack` and means the collection of the three attributes
+Ce `'Jam'` dans &mu;Jam vient de `Jamstack` et signifie une collection de trois (03) attributs:
 * **J** avaScript
 * **A** PI
 * **M** arkup
 
-It is mostly about the creation of *static* and *serverless* websites and you might want to [read more](https://jamstack.org/) about that modern way to build lightweight web pages [here](https://jamstack.wtf/).
+Il s'agit principalement de la création de pages Web statiques ou de sites Web *sans serveur* vous voudrez peut etre [lire plus](https://jamstack.org/) à propos de cette façon de construire des pages web légères [here](https://jamstack.wtf/) et [ici](https://jamstack.email/).
 
-* ## what can I do with ... myjam ?
+## Que puis-je faire avec cela ?
 
-If you want to 
-* create a small to medium web site
-* write down the contents of your web pages in that easy to learn and use Markdown language
-* publish your web-pages to your GitHub repository and GitHub pages
-* do that all from inside free [*Visual Studio Code*](https://code.visualstudio.com/) (`vscode`) editor
+Si vous voulez 
+* Creer un petit à un moyen site web 
+* Ecrire le contenu de vos sites web. Pour cela il sera facile d apprende à utiliser [Markdown language](https://commonmark.org/help/)
+* Publier votre page web dans votre  GitHub repository et [pages GitHub](https://pages.github.com/)
+* Faire tout ceci dans votre éditeur gratuit [*Visual Studio Code*](https://code.visualstudio.com/) (`vscode`)
 
-then the minimalistic and powerful approach of **&mu;jam** might convice you.
+Dès lors que l'approche minimaliste et puissante de &mu;Jam pourrais vous convaincre.
 
-* ## ok, how can I try out your ... &mu;jam approach ?
+<img src="img/browser-view2.png">
+<br><br>
+<img src="img/vscode-view2.png">
 
-Chances are that you already [installed](https://code.visualstudio.com/Download) the `vscode` editor. You can also do that later and first read about creating the webpages of [this  example repository]() step-by-step by yourself manually in three simple steps:
+* ## ok, comment puis-je essayyer votre approche ... &mu;jam ?
 
-1. A new Project
-2. Generating Content
-3. Publish to the World
+il y a de fortes chances que vous ayez deja [installé](https://code.visualstudio.com/Download) `vscode` editor.Vous pouvez également le faire plutard et lire d'abord ce qui concerne la création des pages web sur [cet  exemple repository]()
+Pas à pas par vous meme manuellement en trois (03) étapes simples:
 
-So start with the [&mu;jam installation guide](installationGuide.html) .
+1. Un nouveau projet
+2. Générer le contenu
+3. Publier au monde
+
+Ainsi commencez avec le [guide d'installation &mu;jam ](installationGuide.html) .
 
